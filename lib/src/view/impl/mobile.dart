@@ -5,8 +5,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:webviewx/src/utils/utils.dart';
 
-import 'package:webview_flutter/platform_interface.dart' as wf_pi;
-import 'package:webview_flutter/webview_flutter.dart' as wf;
+import 'package:webview_flutter/src/legacy/platform_interface.dart' as wf_pi;
+import 'package:webview_flutter/src/legacy/webview.dart' as wf;
 
 import 'package:webviewx/src/view/interface.dart' as view_interface;
 import 'package:webviewx/src/controller/interface.dart' as ctrl_interface;
