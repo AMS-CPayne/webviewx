@@ -151,13 +151,13 @@ class _WebViewXState extends State<WebViewX> {
   @override
   Widget build(BuildContext context) {
     final javascriptMode = widget.javascriptMode == JavascriptMode.unrestricted
-        ? wf.JavascriptMode.unrestricted
-        : wf.JavascriptMode.disabled;
+        ? wf_pi.JavascriptMode.unrestricted
+        : wf_pi.JavascriptMode.disabled;
 
     final initialMediaPlaybackPolicy = widget.initialMediaPlaybackPolicy ==
             AutoMediaPlaybackPolicy.alwaysAllow
-        ? wf.AutoMediaPlaybackPolicy.always_allow
-        : wf.AutoMediaPlaybackPolicy.require_user_action_for_all_media_types;
+        ? wf_pi.AutoMediaPlaybackPolicy.always_allow
+        : wf_pi.AutoMediaPlaybackPolicy.require_user_action_for_all_media_types;
 
     void onWebResourceError(wf_pi.WebResourceError err) =>
         widget.onWebResourceError!(
@@ -215,7 +215,7 @@ class _WebViewXState extends State<WebViewX> {
 
     final javascriptChannels = widget.dartCallBacks
         .map(
-          (cb) => wf.JavascriptChannel(
+          (cb) => wf_pi.JavascriptChannel(
             name: cb.name,
             onMessageReceived: (msg) => cb.callBack(msg.message),
           ),
